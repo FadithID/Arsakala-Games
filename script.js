@@ -73,3 +73,17 @@ function closeModal() {
 document.getElementById('game-modal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
 });
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = this;
+
+  emailjs.sendForm("service_ytuwz4d", "template_id9qbbd", form)
+    .then(() => {
+      form.style.display = "none";
+      document.getElementById("thank-you-message").style.display = "block";
+    }, (error) => {
+      alert("Gagal mengirim pesan: " + error.text);
+      console.error("EmailJS error:", error);
+    });
+});

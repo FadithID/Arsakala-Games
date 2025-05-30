@@ -434,3 +434,83 @@ body {
     }
   }
 }
+/* Tambahkan ini */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Tambahkan juga ini: hilangkan konflik dengan animasi keluar */
+.modal-content:not(.closing) {
+  animation: fadeInModal 0.4s ease;
+}
+#thank-you-message {
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#contact {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 60px 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.contact-form button {
+  background: #000000;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #000000;
+  transform: scale(1.05);
+}
+
+#thank-you-message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: green;
+  text-align: center;
+}

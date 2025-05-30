@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arsakala Games</title>
+      <link rel="icon" type="image/png" href="image/ArsakalaLogo.png">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+  (function () {
+    emailjs.init("tO80x0BjJFMOHXfsq"); // ganti dengan public key dari EmailJS
+  })();
+  </script>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
@@ -92,14 +99,22 @@
     </div>
   </section>
 
-  <section id="contact" class="section fade-in">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+<section id="contact" class="section fade-in">
+  <div class="contact-container">
+    <h2>Kirim Pesan</h2>
+    <form id="contact-form" class="contact-form">
+      <input type="text" id="from_name" name="from_name" placeholder="Masukkan nama Anda" required />
+
+      <textarea id="message" name="message" placeholder="Tulis pesan Anda..." rows="5" required></textarea>
+
+      <button type="submit">Kirim</button>
     </form>
-  </section>
+    <div id="thank-you-message" style="display: none;">
+      Terima kasih sudah menghubungi saya! 😊
+    </div>
+  </div>
+</section>
+
 
   <footer class="footer">
     <p>&copy; 2025 Arsakala Games. All rights reserved.</p>
